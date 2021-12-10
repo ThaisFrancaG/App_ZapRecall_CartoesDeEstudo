@@ -1,7 +1,10 @@
 import React from "react";
+import CardStatus from "./CardStatus.js";
+
+
 
 export default function CardSide(props) {
-  const [frenteVerso, turnCard] = React.useState("verso");
+  const [frenteVerso, turnCard] = React.useState("frente");
 
   function changeSide() {
     turnCard("verso");
@@ -10,6 +13,7 @@ export default function CardSide(props) {
   if (frenteVerso === "frente") {
     return (
       <>
+      <div className = "card">
         <header className="top-bottom">
           {props.cardNumber}/{props.totalCards}
         </header>
@@ -17,23 +21,19 @@ export default function CardSide(props) {
           <span>{props.pergunta}</span>
         </article>
         <footer className = "top-bottom"><img onClick ={()=>changeSide()}src = "assets/turn.png"/></footer>
+        </div>
       </>
+      
     );
   } else if (frenteVerso === "verso") {
     return (
         <>
-        <header className="top-bottom">
-         <span>{props.pergunta}</span> {props.cardNumber}/{props.totalCards}
-        </header>
-        <article class="content card-verso">
-          <span>{props.resposta}</span>
-        </article>
-        <footer className = "back-bottom">
-            <button className = "new">Aprendi Agora UwU</button>
-            <button className = "fail">Não Lembrei :(</button>
-            <button className = "sucess" >Lembrei com Esforço :'D</button>
-            <button className = "zap">Zap! ! ! ! (ﾐ⚈ ﻌ ⚈ﾐ)</button>
-            </footer>
+      <CardStatus
+      pergunta = {props.pergunta}
+      resposta = {props.resposta}
+      totalCards = {props.totalCards}
+      cardNumber = {props.cardNumber}
+      />
       </>
     );
   }
