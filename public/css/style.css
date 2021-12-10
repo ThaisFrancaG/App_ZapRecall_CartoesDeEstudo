@@ -1,0 +1,114 @@
+.home-screen{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blue;
+    
+}
+
+.home-screen figure{
+    height:279px;
+    width:218px;
+    margin-top:5%;
+    margin-bottom:8%;
+}
+
+.button-start{
+    width:345px;
+    height: 72px;
+    border: 3px solid #FFEF61;
+    border-radius:12px;
+    box-sizing: border-box;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom:30%;
+}
+.button-start img{
+    padding-left: 10px;
+}
+
+.card {
+    width: 392px;
+    height:575px;
+    border-radius:12px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+
+    display:flex;
+    flex-direction: column;
+
+    background-color: pink;
+    align-items: center;
+}
+
+.top-bottom {
+    display:flex;
+    justify-content: end;
+    align-items: center;
+    height: 45px;
+    width:90%;
+    background-color: #FFEF61;
+    margin:18px 0;
+}
+
+.top-bottom span{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    background-color: royalblue;
+}
+
+.back-bottom{
+    display:flex;
+    column-gap: 16px;
+    margin:18px 0;
+
+}
+
+.back-bottom button{
+    width:65px;
+    height:48px;
+    border-radius: 12px;
+    font-size: 10px;
+    background: transparent;
+}
+
+.content{
+display:flex;
+justify-content: center;
+align-items: center;
+width:80%;
+height:100%;
+background-color: blue;
+}
+.new{
+    border: 3px solid navy;
+
+}
+
+.fail{
+    border: 3px solid red;
+}
+
+.sucess{
+    border: 3px solid greenyellow;
+}
+
+.zap{
+    border: 3px solid yellow;
+}
+
+
+body{
+    font-family: "roboto";
+    background-color: burlywood;
+    display:flex;
+    justify-content: center;
+   
+}
+
