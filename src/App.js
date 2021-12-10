@@ -1,13 +1,16 @@
+import React from "react";
 import Cards from "./components/Cards";
 import HomeScreen from "./components/HomeScreen";
-import Mudarcard from "./components/MudarCard";
+import MudarCard from "./components/MudarCard";
+import CurrentScreen from "./CurrentScreen";
 
 export default function App() {
-    return (
-<>
-     {/* <HomeScreen/> */}
-     <Mudarcard/>
 
- </>
+    let testando = <MudarCard/>;
+    
+
+    return ( <>
+    <CurrentScreen/>
+        </>
     )
   }

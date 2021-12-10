@@ -2,6 +2,7 @@ import React from "react";
 import CardSide from "./CardSide.js";
 import MudarCard from "./MudarCard.js";
 
+
 export default function CardStatus(props){
 
 const [cardState,changeState] = React.useState("card");
@@ -12,11 +13,11 @@ let state = cardState+ " "+choice;
 changeState(state);
 }
 
+let currentScreen
+
 function nextCard(){
     alert("oi")
-    return(
-        <div>"teste"</div>
-    )
+   
 }
 
 if(cardState==="card"){
@@ -60,4 +61,5 @@ else{
                     </>
         )
 }
+
 }
