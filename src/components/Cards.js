@@ -3,7 +3,7 @@ import CardSide from "./CardSide.js";
 
 
 export default function Cards(props){
-    
+
     const questionsAnswer = [
         {pergunta: "O que é JSX?", resposta: "Uma extensão de linguagem do JavaScript"},
         {pergunta: "O React é __ ", resposta: "uma biblioteca JavaScript para construção de interfaces"},
@@ -19,9 +19,11 @@ return (
     <>
 
     <CardSide 
+    nextCard = {"frente"}
     cardNumber = {props.cardNumber} 
     totalCards = {questionsAnswer.length}
     pergunta = {questionsAnswer[props.cardNumber].pergunta} resposta = {questionsAnswer[props.cardNumber].resposta}
+    changeNumber= {props.changeNumber}
      />
 
       </>

@@ -15,11 +15,6 @@ changeState(state);
 
 let currentScreen
 
-function nextCard(){
-    alert("oi")
-   
-}
-
 if(cardState==="card"){
 return (
 <>
@@ -56,7 +51,7 @@ else{
                 <article class="content card-verso">
                   <span>{props.resposta}</span>
                 </article>
-                <footer className = "top-bottom"><img onClick ={()=>nextCard()} src = "assets/turn.png"/></footer>
+                <footer className = "top-bottom"><img onClick ={()=>props.changeNumber()} src = "assets/turn.png"/></footer>
                     </div>
                     </>
         )

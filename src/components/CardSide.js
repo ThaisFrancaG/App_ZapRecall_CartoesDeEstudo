@@ -4,7 +4,7 @@ import CardStatus from "./CardStatus.js";
 
 
 export default function CardSide(props) {
-  const [frenteVerso, turnCard] = React.useState("frente");
+  let [frenteVerso, turnCard] = React.useState(props.nextCard);
 
   function changeSide() {
     turnCard("verso");
@@ -33,6 +33,7 @@ export default function CardSide(props) {
       resposta = {props.resposta}
       totalCards = {props.totalCards}
       cardNumber = {props.cardNumber}
+      changeNumber= {props.changeNumber}
       />
       </>
     );
