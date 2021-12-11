@@ -4,13 +4,19 @@ import CardStatus from "./CardStatus.js";
 
 
 export default function CardSide(props) {
-  let [frenteVerso, turnCard] = React.useState(props.nextCard);
+  let [frenteVerso, turnCard] = React.useState(props.cardSide);
 
   function changeSide() {
     turnCard("verso");
   }
+  function changeSideBack() {
+    turnCard("frente");
+    props.goToCards("newCard")
+    alert("fui chamado depois da outra função")
+  }
 
   if (frenteVerso === "frente") {
+    
     return (
       <>
       <div className = "card">
@@ -26,14 +32,17 @@ export default function CardSide(props) {
       
     );
   } else if (frenteVerso === "verso") {
+ 
     return (
         <>
       <CardStatus
       pergunta = {props.pergunta}
       resposta = {props.resposta}
       totalCards = {props.totalCards}
+      changeSideBack = {changeSideBack}
       cardNumber = {props.cardNumber}
-      changeNumber= {props.changeNumber}
+      changeCard= {props.changeCard}
+      goToCards = {props.goToCards}
       />
       </>
     );

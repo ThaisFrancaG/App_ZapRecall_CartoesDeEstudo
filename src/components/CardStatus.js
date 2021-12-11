@@ -51,7 +51,7 @@ else{
                 <article class="content card-verso">
                   <span>{props.resposta}</span>
                 </article>
-                <footer className = "top-bottom"><img onClick ={()=>props.changeNumber()} src = "assets/turn.png"/></footer>
+                <footer className = "top-bottom"><img onClick ={()=>props.changeSideBack()} src = "assets/turn.png"/></footer>
                     </div>
                     </>
         )
