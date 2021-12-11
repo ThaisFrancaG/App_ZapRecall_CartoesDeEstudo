@@ -11,8 +11,8 @@ export default function CardSide(props) {
   }
   function changeSideBack() {
     turnCard("frente");
-    props.goToCards("newCard")
-    alert("fui chamado depois da outra função")
+    props.changeCard()
+    
   }
 
   if (frenteVerso === "frente") {

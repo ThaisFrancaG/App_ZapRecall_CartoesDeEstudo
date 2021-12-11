@@ -14,16 +14,21 @@ export default function Cards(props){
         {pergunta: "Usamos props para __", resposta: "passar diferentes informações para componentes "},
         {pergunta: "Usamos estado (state) para __ ", resposta: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"}
     ]
-    const [cardNumber, nextCard] = React.useState(props.cardNumber);
+    const [cardNumber, nextCard] = React.useState(0);
  
+    function changeCard(){
+        alert("fui chamado para mudar o card")
+nextCard(cardNumber+1)
+    }
+
+    alert(cardNumber)
 return (
     <>
 
     <CardSide 
     cardNumber = {cardNumber} 
-    changeCard= {props.changeCard}
+    changeCard= {changeCard}
     goToCards = {props.goToCards}
-   
     cardSide = {props.cardSide}
     totalCards = {questionsAnswer.length}
     pergunta = {questionsAnswer[cardNumber].pergunta} resposta = {questionsAnswer[cardNumber].resposta}

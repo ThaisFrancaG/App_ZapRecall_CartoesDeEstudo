@@ -19,15 +19,14 @@ function changeCard(){
 }
 
 function goToCards(currentValue){
-alert("fui chamado, mas nao para atualizar")
-    if(currentValue =="newCard"){
+  
+if(currentValue =="newCard"){
     changeCardSide("frente")
     alert("fui chamado para atualizar")
     changeScreen(<Cards
         
         goToCards = {goToCards}
         cardSide = {cardSide}
-        cardNumber = {0}
         changeCard = {changeCard}
 
         
@@ -39,8 +38,6 @@ alert("fui chamado, mas nao para atualizar")
         changeScreen(<Cards
          goToCards = {goToCards}
          cardSide = {cardSide}
-         cardNumber = {2}
-        
          changeCard = {changeCard}
          />);
     }
