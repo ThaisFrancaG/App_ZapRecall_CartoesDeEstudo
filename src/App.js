@@ -1,8 +1,7 @@
 import React from "react";
 import HomeScreen from "./components/HomeScreen";
-import MudarCard from "./components/MudarCard";
-import CardSide from "./components/CardSide";
 import Cards from "./components/Cards";
+import ResultsScreen from "./ResultsScreen";
 
 // Start CHOKIDAR_USEPOLLING=true npm start
 
@@ -14,20 +13,25 @@ let [cardSide, changeCardSide] = React.useState("frente");
 
 function changeCard(){
     goToCards("newCard")
-    alert(cardSide)
    
+}
+
+function endScreen(cardResults){
+changeScreen(<ResultsScreen 
+    selectScreen = {cardResults}
+    />)
 }
 
 function goToCards(currentValue){
   
-if(currentValue =="newCard"){
+if(currentValue ==="newCard"){
     changeCardSide("frente")
-    alert("fui chamado para atualizar")
     changeScreen(<Cards
         
         goToCards = {goToCards}
         cardSide = {cardSide}
         changeCard = {changeCard}
+        endScreen = {endScreen}
 
         
         />);
@@ -39,6 +43,8 @@ if(currentValue =="newCard"){
          goToCards = {goToCards}
          cardSide = {cardSide}
          changeCard = {changeCard}
+        endScreen = {endScreen}
+
          />);
     }
 }
@@ -46,6 +52,7 @@ if(currentValue =="newCard"){
 
     return ( <>
     {currentDisplay}
+   
 
         </>
     )
