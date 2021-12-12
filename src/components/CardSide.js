@@ -3,17 +3,13 @@ import CardStatus from "./CardStatus.js";
 
 export default function CardSide(props) {
   let [frenteVerso, turnCard] = React.useState(props.cardSide);
-  let [deckResults,addResults] = React.useState([])
+
   function changeSide() {
     turnCard("verso");
   }
   function changeSideBack(cardResults) {
     turnCard("frente");
-    let updateResults = [...deckResults,cardResults]
-    addResults(updateResults)
-    props.changeCard(deckResults);
-    
-    
+    props.changeCard(cardResults);
   }
 
   if (frenteVerso === "frente") {
@@ -27,7 +23,11 @@ export default function CardSide(props) {
             <span>{props.pergunta}</span>
           </article>
           <footer className="top-bottom">
-            <img onClick={() => changeSide()} src="assets/turn.png" alt = "see_answer"/>
+            <img
+              onClick={() => changeSide()}
+              src="assets/turn.png"
+              alt="see_answer"
+            />
           </footer>
         </div>
       </>
@@ -43,7 +43,6 @@ export default function CardSide(props) {
           cardNumber={props.cardNumber}
           changeCard={props.changeCard}
           goToCards={props.goToCards}
-          
         />
       </>
     );

@@ -1,13 +1,14 @@
 import React from "react";
+import ResultsScreen from "../ResultsScreen";
 
 export default function CardStatus(props) {
   const [cardState, changeState] = React.useState("card");
-  const [currentStatus,changeStatus] = React.useState("none")
+  const [currentStatus, changeStatus] = React.useState("none");
 
   function changeCardStatus(choice) {
     let state = cardState + " " + choice;
     changeState(state);
-    changeStatus(choice)
+    changeStatus(choice);
   }
 
   if (cardState === "card") {
@@ -46,13 +47,18 @@ export default function CardStatus(props) {
       <>
         <div className={cardState}>
           <header className="top-bottom">
-            <span>{props.pergunta}</span> {props.cardNumber+1}/{props.totalCards}
+            <span>{props.pergunta}</span> {props.cardNumber + 1}/
+            {props.totalCards}
           </header>
           <article class="content card-verso">
             <span>{props.resposta}</span>
           </article>
           <footer className="top-bottom">
-            <img onClick={() => props.changeSideBack(currentStatus)} src="assets/turn.png" alt = "next_card" />
+            <img
+              onClick={() => props.changeSideBack(currentStatus)}
+              src="assets/turn.png"
+              alt="next_card"
+            />
           </footer>
         </div>
       </>

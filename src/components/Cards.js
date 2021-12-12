@@ -1,4 +1,5 @@
 import React from "react";
+import ResultsScreen from "../ResultsScreen.js";
 import CardSide from "./CardSide.js";
 
 export default function Cards(props) {
@@ -35,32 +36,33 @@ export default function Cards(props) {
     },
   ];
   const [cardNumber, nextCard] = React.useState(0);
+  const [cardResults, acumulateResults] = React.useState([]);
 
-  function changeCard(cardResults) {
-    
+  function changeCard(newResult) {
+    acumulateResults([...cardResults, newResult]);
     nextCard(cardNumber + 1);
-    if(cardNumber+1===questionsAnswer.length){
-    alert("fim do card em"+cardNumber)
-    alert(cardResults)
-    props.endScreen(cardResults);}
-
   }
+
   if (cardNumber + 1 <= questionsAnswer.length) {
     return (
-      <><div className="home-screen">
-        <CardSide
-          cardNumber={cardNumber}
-          changeCard={changeCard}
-          goToCards={props.goToCards}
-          cardSide={props.cardSide}
-          totalCards={questionsAnswer.length}
-          pergunta={questionsAnswer[cardNumber].pergunta}
-          resposta={questionsAnswer[cardNumber].resposta}
-        />
+      <>
+        <div className="home-screen">
+          <CardSide
+            cardNumber={cardNumber}
+            changeCard={changeCard}
+            goToCards={props.goToCards}
+            cardSide={props.cardSide}
+            totalCards={questionsAnswer.length}
+            pergunta={questionsAnswer[cardNumber].pergunta}
+            resposta={questionsAnswer[cardNumber].resposta}
+          />
         </div>
       </>
     );
-  } 
-    
-  
+  } else {
+    alert("fim do card em" + cardNumber);
+
+    return <ResultsScreen cardResults={cardResults} />;
+    // props.endScreen(cardResults);}
+  }
 }
