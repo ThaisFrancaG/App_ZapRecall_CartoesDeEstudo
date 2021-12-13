@@ -14,8 +14,8 @@ export default function CardStatus(props) {
   if (cardState === "card") {
     return (
       <>
-        <div className={cardState}>
-          <header className="top-bottom">
+        <div data-identifier="flashcard" className={cardState}>
+          <header data-identifier="counter" className="top-bottom">
             <span>{props.pergunta}</span> {props.cardNumber + 1}/
             {props.totalCards}
           </header>
@@ -24,19 +24,19 @@ export default function CardStatus(props) {
           </article>
           <footer className="back-bottom">
             <button onClick={() => changeCardStatus("new")} className="new">
-              Aprendi Agora UwU
+              Aprendi Agora
             </button>
             <button onClick={() => changeCardStatus("fail")} className="fail">
-              Não Lembrei :(
+              Não Lembrei 
             </button>
             <button
               onClick={() => changeCardStatus("sucess")}
               className="sucess"
             >
-              Lembrei com Esforço :'D
+              Lembrei com Esforço
             </button>
             <button onClick={() => changeCardStatus("zap")} className="zap">
-              Zap! ! ! ! (ﾐ⚈ ﻌ ⚈ﾐ)
+              Zap! 
             </button>
           </footer>
         </div>
@@ -45,8 +45,8 @@ export default function CardStatus(props) {
   } else {
     return (
       <>
-        <div className={cardState}>
-          <header className="top-bottom">
+        <div data-identifier="flashcard" className={cardState}>
+          <header data-identifier="counter" className="top-bottom">
             <span>{props.pergunta}</span> {props.cardNumber + 1}/
             {props.totalCards}
           </header>
@@ -54,7 +54,7 @@ export default function CardStatus(props) {
             <span>{props.resposta}</span>
           </article>
           <footer className="top-bottom">
-            <img
+            <img data-identifier="arrow"
               onClick={() => props.changeSideBack(currentStatus)}
               src="assets/turn.png"
               alt="next_card"

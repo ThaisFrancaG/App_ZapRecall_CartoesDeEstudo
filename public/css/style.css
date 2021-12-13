@@ -84,7 +84,7 @@
 
 .fail {
   border: 3px solid red;
-  box-shadow: 0px 8px 24px rgba(218, 17, 17, 0.493);
+  box-shadow: 0px 8px 24px rgba(218, 17, 17, 0.12);
 }
 
 .sucess {

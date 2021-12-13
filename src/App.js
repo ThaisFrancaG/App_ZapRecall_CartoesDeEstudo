@@ -22,7 +22,6 @@ export default function App() {
           goToCards={goToCards}
           cardSide={cardSide}
           changeCard={changeCard}
-          endScreen={endScreen}
         />
       );
     } else {
@@ -31,7 +30,6 @@ export default function App() {
           goToCards={goToCards}
           cardSide={cardSide}
           changeCard={changeCard}
-          endScreen={endScreen}
         />
       );
     }

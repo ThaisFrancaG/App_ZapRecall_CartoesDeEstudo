@@ -15,15 +15,15 @@ export default function CardSide(props) {
   if (frenteVerso === "frente") {
     return (
       <>
-        <div className="card">
-          <header className="top-bottom">
+        <div data-identifier="flashcard" className="card">
+          <header data-identifier="counter" className="top-bottom">
             {props.cardNumber + 1}/{props.totalCards}
           </header>
           <article className="content card-frente">
             <span>{props.pergunta}</span>
           </article>
           <footer className="top-bottom">
-            <img
+            <img data-identifier="arrow"
               onClick={() => changeSide()}
               src="assets/turn.png"
               alt="see_answer"

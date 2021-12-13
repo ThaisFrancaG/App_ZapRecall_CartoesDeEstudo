@@ -20,7 +20,7 @@ export default function ResultsScreen(props) {
     return (
       <div className="results">
         <p className="mainResult">
-          Putz...
+          Putz..
           <img src="./assets/sad.png" alt="sad_emoji" />
         </p>
         <p>Você esqueceu {totalFails} flashcards</p>

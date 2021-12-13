@@ -7,7 +7,7 @@ export default function HomeScreen(props) {
             <figure>
             <img src="assets/logo.png" alt = "logo_zapRecall" />
             </figure>
-            <button onClick={()=>props.goToCards()} className="button-start"> Praticar React <img   src="assets/next.png" alt = "start" /></button>
+            <button  data-identifier="start-zap-recall" onClick={()=>props.goToCards()} className="button-start"> Praticar React <img   src="assets/next.png" alt = "start" /></button>
         </div>
     )
 }
