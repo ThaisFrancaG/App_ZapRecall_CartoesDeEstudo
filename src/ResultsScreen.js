@@ -1,6 +1,6 @@
 export default function ResultsScreen(props) {
   let totalFails = 0;
-  alert(props.cardResults);
+
   for (let i = 0; i < props.cardResults.length; i++) {
     if (props.cardResults[i] === "fail") {
       totalFails++;

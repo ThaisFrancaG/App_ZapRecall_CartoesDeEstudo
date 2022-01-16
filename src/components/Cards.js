@@ -63,6 +63,6 @@ export default function Cards(props) {
     alert("fim do card em" + cardNumber);
 
     return <ResultsScreen cardResults={cardResults} />;
-    // props.endScreen(cardResults);}
+    
   }
 }

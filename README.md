@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+## ZapIt: Aprendendo Por Repetição
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<figure align:"center">
+<img src = "public/assets/logo.png">
+</figure>
 
-## Available Scripts
+## Qual a lógica?
 
-In the project directory, you can run:
+A ideia é ter um aplicativo que funcione como um bloco de cartões de estudo, ou flahs cards, baseados na técnica de repetição espaçada aplicada na memorização de conteúdos.
 
-### `npm start`
+Atualmente, o aplicativo permite ao usuário:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Ver a frente e o verso dos cards pré-estabelecidos, com navegação por cliques.
+- Marcar o quão fácil foi de lembrar a resposta para a pergunta específica
+- Ver, ao final do conjunto de cartas, quantas cartas ele esqueceu
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<figure align:"center">
+<img src="public/assets/exemploUso.png">
+</figure>
 
-### `npm test`
+## Como Usar?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A forma mais direta é ir direto no link:
+<a>https://app-zap-recall-cartoes-de-estudo-hxwon4y4x-thaisfrancag.vercel.app/</a>
 
-### `npm run build`
+Mas, se quiser ver melhor as funcionalidade e o código em si, você também pode baixar o repositório para sua máquina, através dos seguintes passos:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone o repositório
+   (se não souber como, confira: https://docs.github.com/pt/repositories/creating-and-managing-repositories/cloning-a-repository)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Instale as dependências necessárias (no caso, digitar "npm install" na pasta onde clonou o repositório deverá ser suficiente)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Depois de instaladas, basta digitar "npm start" no terminal, e o aplicativo será iniciado no seu navegador!
 
-### `npm run eject`
+4. Com o aplicativo iniciado, é só iniciar no botão "praticar react". O primeiro cartào será exibido, e ai basta ir clicando nos botões do cartão para avançar no baralho
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. Ao final, se quiser passar novamente pelo baralho, basta atualizar a página que a aplicação será reiniciada.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## E como ele foi feito?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+O aplicativo TrackIt foi criado usando:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [React-Native](https://facebook.github.io/react-native/)
 
-## Learn More
+- [Prettier](https://prettier.io/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Projetos Futuros?
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+O projeto ainda tem alguns ajustes a serem feitos no futuro, a fim de melhorar a usabilidade e a experiência do usuário. Inclusive, se tiver sugestões, elas serão mais do que bem-vindas!
+Atualmente, as atualizações planejadas são:
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Permitir que o usuário repasse pelo baralho na tela final sem ser necessário atualizar a página
+- Permitir que o usuário crie baralhos personalizados
+- Permitir a existência de mais um de baralho disponível
+- Armazenar os resultados do usuário
